@@ -1,11 +1,19 @@
 document.addEventListener('DOMContentLoaded', ()=> {
 const form = document.getElementById ("registration-form")
-// Feedback Div
 const feedbackDiv = document.getElementById ("form-feedback")
 
-form.addEventListener ('submit', (formContent) =>{
-formContent.preventDefault()
-})
+// Add event lister to form
+form.addEventListener ('submit', (event) =>{
+// Prevent form from submitting
+event.preventDefault()
+
+// Call form validation function
+validateForm;
+});
+
+
+// Form Validation Function
+function validateForm () {
 // Retrieve User Inputs
 const usernameInput = document.getElementById ("username")
 const emailInput = document.getElementById ("email")
@@ -18,7 +26,7 @@ const password = passwordInput.value.trim ();
 
 // Initialize Validation Variables:
 let isValid = true;
-const messages = []
+const messages = [];
 
 // Username Validation:
 if ( usernameInput.length <3){
@@ -50,5 +58,8 @@ if (!isValid){
         feedbackDiv.textContent = "Registration successful!"
         feedbackDiv.style.color= '#28a745'
     }
+}
+});
 
-})
+
+
