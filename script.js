@@ -29,10 +29,9 @@ let isValid = true;
 const messages = [];
 
 // Username Validation:
-if ( usernameInput.length <3){
+if ( username.length <3){
     isValid= false;
     messages.push ("username must be at least 3 character long")
-
 }
 
 // Email Validation:
