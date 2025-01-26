@@ -8,7 +8,7 @@ form.addEventListener ('submit', (event) =>{
 event.preventDefault()
 
 // Call form validation function
-validateForm;
+validateForm ();
 });
 
 
